@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nasa's Gallery</title>
+  <link rel="stylesheet" href="../static/assets/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  
+</head>
+
+<body>
+  <header>
+    <nav class="custom-navbar">
+      <div class="logo">
+        <a href="https://www.nasa.gov/">
+          <img src="../static/assets/images/Nasa_Image.png" alt="NASA Logo" width="112" height="28">
+        </a>
+      </div>
+      
+      <div  class="post-button">
+        <a class="button custom-button" href="https://twitter.com/intent/tweet?text=@NASA Where are the aliens...?" target="_blank">
+          <span class="icon">
+            <img src="../static/assets/images/x-twitter.svg" class="fab fa-twitter">
+          </span>
+          <span style="color: black;">Post</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+  
+  
+  
+  
+  
+  <h1 class="BG-question">Where are the aliens...?</h1>
+
+  <div class="search-container">
+    <form class="search-form" >
+      <input class="search-bar" type="search" placeholder="Explore the cosmos.." aria-label="Search">
+      <button class="submit-button" type="submit">Search</button>
+    </form>
+  </div>
+
+  <div class="gallery-container">
+    
+    <div class="gallery-container">
+      <div class="main-img-container">
+        <img src="{{ ../static/assets/images/BlackHole.jpg }}" alt="Black hole in space">
+      </div>
+      
+      <div class="first-vid-container">
+         <iframe width="530" height="240" src="{{ https://www.youtube.com/embed/Sv3eXRN7hLo?controls=0 }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+  
+      <div class="apollo-img">
+        <img src="{{ ../static/assets/images/Apollo_NA.jpg }}">
+      </div>
+  
+      <div class="rover-img-div">
+        <img src="{{ ../static/assets/images/roverselfie.jpg }}">
+      </div>
+  
+      <div class="space-team-img-div">
+        <img src="{{ ../static/assets/images/SpaceTeam to the moon..jpg }}" alt="">
+      </div>
+  
+      <div class="second-vid-container">
+        <iframe width="530" height="240" src="{{ https://www.youtube-nocookie.com/embed/n--9w6zt9MM?controls=0" title="YouTube video player }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+  
+      <div class="rogue-img-div">
+        <img src="{{ ../static/assets/images/RoguePlanet1600.jpg }}">
+      </div>
+  
+      <div class="third-vid-container">
+        <iframe width="530" height="240" src="{{ https://www.youtube-nocookie.com/embed/lPyl6d2FJGw?controls=0" title="YouTube video player }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+  
+      <div class="milky-way-img-div">
+        <img src="{{ ../static/assets/images/Milky_way.jpeg }}" alt="">
+      </div>
+  
+      <div class="bhm-img-div">
+        <img src="{{ ../static/assets/images/bhm_bluford_sts-8_on_treadmill_s08-13-0361.jpg }}">
+      </div>
+  
+      <div>
+        <iframe width="530" height="240" src=" {{ https://www.youtube-nocookie.com/embed/TgVorJfM8BM?controls=0 }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+  
+      <div>
+        <iframe width="530" height="240" src="{{ https://www.youtube-nocookie.com/embed/9ekFE2RxBMI?controls=0&amp;start=229 }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      
+      <div class="dark-matter-div-img">
+        <img src="../static/assets/images/darkMatter.jpg">
+      </div>
+  
+      <div class="moon-div">
+        <img src="{{ ../static/assets/images/iss068e036313_orig.jpg }}" alt="">
+      </div>
+  
+      <div>
+        <iframe width="550" height="240" src=" {{ https://www.youtube-nocookie.com/embed/i93Z7zljQ7I?controls=0&amp;start=229 }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+  
+    </div>
+  </div>
+
+
+  <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}">
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,166 @@
+*{
+    font-family: 'Share Tech Mono', monospace;
+    color: white;
+    
+}
+
+html {
+    background-image: url("images/wp9116463-4k-black-space-wallpapers.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 16px;
+}
+
+.BG-question {
+    margin-top: 2rem;
+    margin-left: 2rem;
+  font-size: 3rem;
+}
+
+.search-container{
+  margin-top: 10rem;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 15rem;
+}
+
+.search-form{
+  flex: 1;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  height: 7vh;
+}
+
+.search-bar {
+  width: 80%;
+  height: 7vh;
+  background-color: white;
+  border-radius: 2rem;
+  text-indent: 2rem;
+  color: black;
+  font-size: 1rem;
+}
+
+.submit-button {
+    height: 7vh;
+    background-color: red;
+    border-radius: 2rem;
+    border: 0;
+    font-size: 1rem;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Creates 3 columns of equal width */
+  grid-template-rows: repeat(5, 0fr);    /* Create 3 equal-height rows */
+  gap: 1rem; /* Gap between rows and columns */
+  padding: 2rem;
+  background-color: #333;
+  width: 100%;
+  height: 200vh;
+}
+
+.main-img-container,
+.first-vid-container,
+.apollo-img,
+.second-vid-container,
+.rover-img-div,
+.space-team-img-div, 
+.rogue-img-div,
+.third-vid-container, 
+.milky-way-img-div,
+.bhm-img-div, 
+.dark-matter-div-img,
+ .moon-div {
+  width: 100%; /* Each item spans the entire column */
+  height: 15rem;
+}
+
+.main-img-container img,
+.apollo-img img,
+.rover-img-div img,
+.space-team-img-div img,
+ .rogue-img-div img, 
+ .milky-way-img-div img,
+ .bhm-img-div img,
+ .dark-matter-div-img img,
+ .moon-div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain image aspect ratio */
+}
+
+iframe {
+  width: 100%;
+}
+
+/* Base styles for the custom navbar */
+/* Base styles for the custom navbar */
+.custom-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #333; /* Change the background color of the navbar */
+}
+
+/* Styling for the logo */
+.logo img {
+  width: 112px;
+  height: 28px;
+}
+
+/* Styling for the "Post" button */
+.post-button {
+  margin-left: auto;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .gallery-container {
+    grid-template-columns: 1fr; /* Change to a single column layout */
+    padding: 1rem; /* Adjust padding for smaller screens */
+  }
+
+  .search-bar {
+    text-indent: 1rem;
+    width: 70%;
+  }
+
+  .logo,
+  .post-button {
+    margin: 0;
+    margin-top: 0.5rem; /* Add spacing between elements */
+    text-align: center; /* Center elements on small screens */
+  }
+  
+  html {
+    width: 100%;
+  }
+
+  body{
+    width: 100%;
+  }
+
+
+  .BG-question {
+    margin-top: 2rem;
+    margin-left: 2rem;
+    font-size: 2rem;
+  }
+
+  iframe {
+    width: 100%;
+  }
+
+}
+
+
+
+
+
+
+
