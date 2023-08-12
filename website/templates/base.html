@@ -10,7 +10,23 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-  
+  <link rel="apple-touch-icon" sizes="57x57" href="../static/Favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../static/Favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../static/Favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../static/Favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../static/Favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../static/Favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../static/Favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../static/Favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../static/Favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../static/Favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../static/Favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../static/Favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../static/Favicon/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
 </head>
 
 <body>
@@ -40,61 +56,67 @@
   <h1 class="BG-question">Where are the aliens...?</h1>
 
   <div class="search-container">
-    <form class="search-form" >
-      <input class="search-bar" type="search" placeholder="Explore the cosmos.." aria-label="Search">
+    <form method="POST" class="search-form" >
+      <input class="search-bar" name="user-input" type="search" placeholder="Explore the cosmos.." aria-label="Search">
       <button class="submit-button" type="submit">Search</button>
     </form>
   </div>
 
-  <div class="gallery-container">
+  
     
-    <div class="gallery-container">
+  <div class="gallery-container">
+
+    {% if api_images %}
+        {% for image in api_images %}
+            <img src="{{ image }}" alt="Nasa Image">
+        {% endfor %}
+    {% else %}
       <div class="main-img-container">
-        <img src="{{ ../static/assets/images/BlackHole.jpg }}" alt="Black hole in space">
+        <img src="../static/assets/images/BlackHole.jpg" alt="Black hole in space">
       </div>
       
       <div class="first-vid-container">
-         <iframe width="530" height="240" src="{{ https://www.youtube.com/embed/Sv3eXRN7hLo?controls=0 }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+         <iframe width="530" height="240" src="https://www.youtube.com/embed/Sv3eXRN7hLo?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
   
       <div class="apollo-img">
-        <img src="{{ ../static/assets/images/Apollo_NA.jpg }}">
+        <img src="../static/assets/images/Apollo_NA.jpg" >
       </div>
   
       <div class="rover-img-div">
-        <img src="{{ ../static/assets/images/roverselfie.jpg }}">
+        <img src="../static/assets/images/roverselfie.jpg">
       </div>
   
       <div class="space-team-img-div">
-        <img src="{{ ../static/assets/images/SpaceTeam to the moon..jpg }}" alt="">
+        <img src="../static/assets/images/SpaceTeam to the moon..jpg" alt="">
       </div>
   
       <div class="second-vid-container">
-        <iframe width="530" height="240" src="{{ https://www.youtube-nocookie.com/embed/n--9w6zt9MM?controls=0" title="YouTube video player }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="530" height="240" src="https://www.youtube-nocookie.com/embed/n--9w6zt9MM?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
   
       <div class="rogue-img-div">
-        <img src="{{ ../static/assets/images/RoguePlanet1600.jpg }}">
+        <img src="../static/assets/images/RoguePlanet1600.jpg">
       </div>
   
       <div class="third-vid-container">
-        <iframe width="530" height="240" src="{{ https://www.youtube-nocookie.com/embed/lPyl6d2FJGw?controls=0" title="YouTube video player }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="530" height="240" src="https://www.youtube-nocookie.com/embed/lPyl6d2FJGw?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
   
       <div class="milky-way-img-div">
-        <img src="{{ ../static/assets/images/Milky_way.jpeg }}" alt="">
+        <img src="../static/assets/images/Milky_way.jpeg" alt="">
       </div>
   
       <div class="bhm-img-div">
-        <img src="{{ ../static/assets/images/bhm_bluford_sts-8_on_treadmill_s08-13-0361.jpg }}">
+        <img src="../static/assets/images/bhm_bluford_sts-8_on_treadmill_s08-13-0361.jpg">
       </div>
   
       <div>
-        <iframe width="530" height="240" src=" {{ https://www.youtube-nocookie.com/embed/TgVorJfM8BM?controls=0 }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="530" height="240" src="https://www.youtube-nocookie.com/embed/TgVorJfM8BM?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
   
       <div>
-        <iframe width="530" height="240" src="{{ https://www.youtube-nocookie.com/embed/9ekFE2RxBMI?controls=0&amp;start=229 }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="530" height="240" src="https://www.youtube-nocookie.com/embed/9ekFE2RxBMI?controls=0&amp;start=229" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
       
       <div class="dark-matter-div-img">
@@ -102,19 +124,15 @@
       </div>
   
       <div class="moon-div">
-        <img src="{{ ../static/assets/images/iss068e036313_orig.jpg }}" alt="">
+        <img src="../static/assets/images/iss068e036313_orig.jpg" alt="">
       </div>
   
       <div>
-        <iframe width="550" height="240" src=" {{ https://www.youtube-nocookie.com/embed/i93Z7zljQ7I?controls=0&amp;start=229 }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="550" height="240" src="https://www.youtube-nocookie.com/embed/i93Z7zljQ7I?controls=0&amp;start=229" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
   
-    </div>
+    {% endif %}
   </div>
-
-
-  <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}">
-  </script>
 
 </body>
 
