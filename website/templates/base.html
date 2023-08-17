@@ -54,7 +54,7 @@
 
 
 
-  <h1 class="BG-question">Where are the aliens...?</h1>
+  
 
   <div class="search-container">
     <form method="POST" class="search-form">
@@ -63,6 +63,26 @@
     </form>
   </div>
 
+  <div id="modal" class="modal">
+    <div class="modal-background"></div>
+    <div id="modal-size" class="modal-card">
+      <header class="modal-card-head">
+        <p id="modal-title" class="modal-card-title">{{ modal_resources['title'] }}</p>
+        <button id="closeBtn" class="delete" aria-label="close"></button>
+      </header>
+      <section id="modal-section" class="modal-card-body">
+        <div class="modal-img-container">
+          <img src="{{ modal_resources['image'] }}">
+        </div>
+        <div class='modal-p-container'>
+          <p class="modal-p">{{ modal_resources['description'] }}</p>
+        </div>
+      </section>
+      <footer class="modal-card-foot">
+      </footer>
+    </div>
+  </div>
+  
 
 
   <div class="gallery-container">
@@ -86,9 +106,6 @@
     {% endfor %}
     {% else %}
     <!-- Predefined images and videos -->
-    <div class="main-img-container">
-      <img src="../static/assets/images/BlackHole.jpg" alt="Black hole in space">
-    </div>
     <div class="main-img-container">
       <img src="../static/assets/images/BlackHole.jpg" alt="Black hole in space">
     </div>
@@ -169,7 +186,7 @@
 
     {% endif %}
   </div>
-
+  <script src="../static/assets/script.js"></script>
 </body>
 
 </html>
