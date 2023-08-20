@@ -17,6 +17,9 @@ html {
   margin-top:1rem;
 }
 
+
+
+
 .modal-img-container {
   width: 100%;
   height: fit-content;
@@ -127,6 +130,10 @@ iframe {
   width: 100%;
 }
 
+video {
+  width: 100%;
+}
+
 /* Base styles for the custom navbar */
 /* Base styles for the custom navbar */
 .custom-navbar {
@@ -135,6 +142,15 @@ iframe {
   align-items: center;
   padding: 1rem;
   background-color: #333; /* Change the background color of the navbar */
+}
+
+.logo{
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo::hover{
+  transform: scale(1.9); /* Scale the element by 10% on hover */
 }
 
 /* Styling for the logo */
@@ -146,6 +162,11 @@ iframe {
 /* Styling for the "Post" button */
 .post-button {
   margin-left: auto;
+}
+
+.apod_btn {
+  background-color: black;
+  color:white;
 }
 
 

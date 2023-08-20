@@ -33,10 +33,9 @@
   <header>
     <nav class="custom-navbar">
       <div class="logo">
-        <a href="https://www.nasa.gov/">
           <img src="../static/assets/images/Nasa_Image.png" alt="NASA Logo" width="112" height="28">
-        </a>
       </div>
+
 
       <div class="post-button">
         <a class="button custom-button" href="https://twitter.com/intent/tweet?text=@NASA Where are the aliens...?"
@@ -51,10 +50,6 @@
   </header>
 
 
-
-
-
-  
 
   <div class="search-container">
     <form method="POST" class="search-form">
@@ -86,13 +81,7 @@
 
 
   <div class="gallery-container">
-
-    {% if api_media %}
-    {% for image in api_media['images'] %}
-    <img src="{{ image }}" alt="Nasa Image">
-    {% endfor %}
-    {% endif %}
-
+    
     {% if videos_manifests %}
     {% for video_manifest in videos_manifests %}
         {% for item in video_manifest['manifest']['collection']['items'] %}
@@ -104,87 +93,95 @@
             {% endif %}
         {% endfor %}
     {% endfor %}
-    {% else %}
-    <!-- Predefined images and videos -->
-    <div class="main-img-container">
-      <img src="../static/assets/images/BlackHole.jpg" alt="Black hole in space">
-    </div>
+  {% endif %}
 
-    <div class="first-vid-container">
-      <iframe width="530" height="240" src="https://www.youtube.com/embed/Sv3eXRN7hLo?controls=0"
-        title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen></iframe>
-    </div>
+{% if not videos_manifests %}
+<div class="main-img-container">
+  <img src="../static/assets/images/BlackHole.jpg" alt="Black hole in space">
+</div>
 
-    <div class="apollo-img">
-      <img src="../static/assets/images/Apollo_NA.jpg">
-    </div>
+<div class="first-vid-container">
+  <iframe width="530" height="240" src="https://www.youtube.com/embed/Sv3eXRN7hLo?controls=0"
+    title="YouTube video player" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</div>
 
-    <div class="rover-img-div">
-      <img src="../static/assets/images/roverselfie.jpg">
-    </div>
+<div class="apollo-img">
+  <img src="../static/assets/images/Apollo_NA.jpg">
+</div>
 
-    <div class="space-team-img-div">
-      <img src="../static/assets/images/SpaceTeam to the moon..jpg" alt="">
-    </div>
+<div class="rover-img-div">
+  <img src="../static/assets/images/roverselfie.jpg">
+</div>
 
-    <div class="second-vid-container">
-      <iframe width="530" height="240" src="https://www.youtube-nocookie.com/embed/n--9w6zt9MM?controls=0"
-        title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen></iframe>
-    </div>
+<div class="space-team-img-div">
+  <img src="../static/assets/images/SpaceTeam to the moon..jpg" alt="">
+</div>
 
-    <div class="rogue-img-div">
-      <img src="../static/assets/images/RoguePlanet1600.jpg">
-    </div>
+<div class="second-vid-container">
+  <iframe width="530" height="240" src="https://www.youtube-nocookie.com/embed/n--9w6zt9MM?controls=0"
+    title="YouTube video player" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</div>
 
-    <div class="third-vid-container">
-      <iframe width="530" height="240" src="https://www.youtube-nocookie.com/embed/lPyl6d2FJGw?controls=0"
-        title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen></iframe>
-    </div>
+<div class="rogue-img-div">
+  <img src="../static/assets/images/RoguePlanet1600.jpg">
+</div>
 
-    <div class="milky-way-img-div">
-      <img src="../static/assets/images/Milky_way.jpeg" alt="">
-    </div>
+<div class="third-vid-container">
+  <iframe width="530" height="240" src="https://www.youtube-nocookie.com/embed/lPyl6d2FJGw?controls=0"
+    title="YouTube video player" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</div>
 
-    <div class="bhm-img-div">
-      <img src="../static/assets/images/bhm_bluford_sts-8_on_treadmill_s08-13-0361.jpg">
-    </div>
+<div class="milky-way-img-div">
+  <img src="../static/assets/images/Milky_way.jpeg" alt="">
+</div>
 
-    <div>
-      <iframe width="530" height="240" src="https://www.youtube-nocookie.com/embed/TgVorJfM8BM?controls=0"
-        title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen></iframe>
-    </div>
+<div class="bhm-img-div">
+  <img src="../static/assets/images/bhm_bluford_sts-8_on_treadmill_s08-13-0361.jpg">
+</div>
 
-    <div>
-      <iframe width="530" height="240" src="https://www.youtube-nocookie.com/embed/9ekFE2RxBMI?controls=0&amp;start=229"
-        title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen></iframe>
-    </div>
+<div>
+  <iframe width="530" height="240" src="https://www.youtube-nocookie.com/embed/TgVorJfM8BM?controls=0"
+    title="YouTube video player" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</div>
 
-    <div class="dark-matter-div-img">
-      <img src="../static/assets/images/darkMatter.jpg">
-    </div>
+<div>
+  <iframe width="530" height="240" src="https://www.youtube-nocookie.com/embed/9ekFE2RxBMI?controls=0&amp;start=229"
+    title="YouTube video player" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</div>
 
-    <div class="moon-div">
-      <img src="../static/assets/images/iss068e036313_orig.jpg" alt="">
-    </div>
+<div class="dark-matter-div-img">
+  <img src="../static/assets/images/darkMatter.jpg">
+</div>
 
-    <div>
-      <iframe width="550" height="240" src="https://www.youtube-nocookie.com/embed/i93Z7zljQ7I?controls=0&amp;start=229"
-        title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen></iframe>
-    </div>
+<div class="moon-div">
+  <img src="../static/assets/images/iss068e036313_orig.jpg" alt="">
+</div>
 
-    {% endif %}
+<div>
+  <iframe width="550" height="240" src="https://www.youtube-nocookie.com/embed/i93Z7zljQ7I?controls=0&amp;start=229"
+    title="YouTube video player" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</div>
+{% endif %}
+
+{% if api_media %}
+    <!-- API images -->
+    {% for image in api_media['images'] %}
+    <img src="{{ image }}" alt="Nasa Image">
+    {% endfor %}
+{% endif %}
+
   </div>
   <script src="../static/assets/script.js"></script>
 </body>
